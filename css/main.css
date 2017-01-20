@@ -1,22 +1,25 @@
-ul {
+ul 
+{
 	list-style: none;
 	padding: 0;
 	margin: 0;
 	width: 500px;
 }
  
-li {
+li 
+{
 	border: 1px solid #CCC;
 	background: #eee;
 	padding: 5px 10px;
 	color: #000; 
 }
 
-li span {
+li span 
+{
 	padding-left: 10px;
 }
 
 .checked 
 {
-text-decoration: line-through;
+	text-decoration: line-through;
 }

@@ -4,8 +4,9 @@
 
 function updateTaskStatus()
 {
-	var cbId = this.id.replace("cb_", "");
-	var itemTask = document.getElementById("item_" + cbId);
+	var checkId = this.className.replace("check", "");
+	var itemTask = document.getElementByClassName("item_" + checkId + "fa fa-trash-o");
+
 
 	if (this.checked) 
 	{
@@ -20,18 +21,22 @@ function updateTaskStatus()
 function addNewTask(list, itemTask)
 {	
 	totalItems++;
-
+	var totalItems = 0;
 	//Crea una nueva tarea con un checkbox al inicio
 	var listTask = document.createElement("li");
-	var totalItems = 0;
+
 	var checkbox = document.createElement("input");
 	checkbox.type = "checkbox";
-	checkbox.id = "cb_" + totalItems;
+	checkbox.className = "check" + totalItems;
 	checkbox.onclick = updateTaskStatus;
 
 	var span = document.createElement("span");
-	span.id = "item_" + totalItems;
+	span.className = "item_" + totalItems;
 	span.innerHTML = itemTask;
+
+	var icon = document.createElement("i");
+	i.className = "fa fa-trash-o" + totalItems;
+	i.innerHTML = itemTask;
 
 	//listTask.innerHTML = itemTask;
 	listTask.appendChild(checkbox);
