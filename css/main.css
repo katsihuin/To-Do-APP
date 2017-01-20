@@ -15,3 +15,8 @@ li {
 li span {
 	padding-left: 10px;
 }
+
+.checked 
+{
+text-decoration: line-through;
+}
