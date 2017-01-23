@@ -23,3 +23,15 @@ li span
 {
 	text-decoration: line-through;
 }
+
+li i 
+{
+	cursor: pointer;
+
+}
+
+li i:hover 
+{
+	color: red;
+	
+}
