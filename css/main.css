@@ -1,3 +1,7 @@
+h1
+{
+	background: #F1F1F1;
+}
 ul 
 {
 	list-style: none;
@@ -19,6 +23,11 @@ li span
 	padding-left: 10px;
 }
 
+button i 
+{
+	padding-right: 10px;
+}
+
 .checked 
 {
 	text-decoration: line-through;
@@ -33,5 +42,22 @@ li i
 li i:hover 
 {
 	color: red;
+	font-weight: bolder;
+}
+
+/**************** Responsive ****************/
+@media screen and (max-width:768px) and (min-width:400px)
+{
+	h1
+	{
+		font-size: 20px;
+	}
 	
+}
+@media screen and (max-width:999px)
+{
+	body div 
+	{
+		
+	}
 }
