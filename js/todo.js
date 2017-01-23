@@ -36,6 +36,7 @@ function removeTask(evt)
 	// Cuando se da click al icono tacho ubicada en icon
 	var hijo = evt.target.parentNode;
 	hijo.parentNode.removeChild(hijo);
+	hijo.className = "option animated FadeOutDown";
 }
 
 //funcion para agrega tareas
@@ -48,6 +49,7 @@ function addNewTask(list, itemTask)
 	//Crea una nueva tarea 
 	var listTask = document.createElement("li");
 	listTask.id = "li_" + id;
+
 
 	//Adiciona un checkbox a la tarea
 	var checkbox = document.createElement("input");
