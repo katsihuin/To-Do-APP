@@ -4,8 +4,8 @@
 
 function updateTaskStatus()
 {
-	var checkId = this.className.replace("check", "");
-	var itemTask = document.getElementByClassName("item_" + checkId + "fa fa-trash-o");
+	var checkId = this.id.replace("cb_", "");
+	var itemTask = document.getElementById("item_" + checkId);
 
 
 	if (this.checked) 
@@ -27,21 +27,24 @@ function addNewTask(list, itemTask)
 
 	var checkbox = document.createElement("input");
 	checkbox.type = "checkbox";
-	checkbox.className = "check" + totalItems;
+	checkbox.id = "cb_" + totalItems;
 	checkbox.onclick = updateTaskStatus;
 
 	var span = document.createElement("span");
-	span.className = "item_" + totalItems;
+	span.id = "item_" + totalItems;
 	span.innerHTML = itemTask;
 
 	var icon = document.createElement("i");
-	i.className = "fa fa-trash-o" + totalItems;
-	i.innerHTML = itemTask;
+	icon.className = "fa fa-trash-o" + totalItems;
+	//icon.innerHTML = itemTask;
 
 	//listTask.innerHTML = itemTask;
 	listTask.appendChild(checkbox);
 	listTask.appendChild(span);
+	listTask.appendChild(icon);
 	list.appendChild(listTask);
+
+	
 }
 
 
