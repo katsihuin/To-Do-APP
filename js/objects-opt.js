@@ -1,10 +1,11 @@
-//var listaTareas = [["tarea1", true], ["tarea2", false], ["tarea3", false]];
+//variables globales
 
 var listaTareas = [];
-
 var button=document.getElementById("btnAdd");
+
 button.setAttribute("onclick","btnClick()");
 
+//Agregar tareas
 function btnClick ()
 {
     var lista = document.getElementById("todoList");
@@ -22,8 +23,8 @@ function btnClick ()
         alert("Ingresa una tarea");
     }
 }
-//var taskContainer = document
-function drawTasksList(e)
+//Crear tareas
+function drawTasksList()
 {
 	//obten tu contenedor de lista de tareas
 	var lista = document.getElementById("todoList");
@@ -35,7 +36,7 @@ function drawTasksList(e)
 			lista.innerHTML += html;
 		}
 
-	e.preventDefault();
+	
 }
 
 //Comprueba o desmarca un elemento checkbox
